@@ -1,0 +1,30 @@
+name: 'ezcache-save'
+description: ''
+inputs:
+  type:
+    description: 'The type of cache to create'
+    required: false
+    default: 'auto'
+  version:
+    description: 'The version number of the cache'
+    required: false
+  path:
+    description: 'The cache path, only valid for types "run", "diff", "daily", "env"'
+    required: false
+  provider:
+    description: 'The provider for cache storage, supports "hosted", "local"'
+    required: false
+  modules:
+    description: 'Comma-separated list of powershell modules to install, only valid for the "powershell" cache'
+    required: false
+  script:
+    description: 'Path to a script that installs dependencies, only valid for the "script" cache'
+    required: false
+outputs:
+  cache-hit:
+    description: 'When "true", indicates an exact match was found for the key'
+  cache-restore-type:
+    description: 'Indicates the restore type, either "miss", "partial", or "full"'
+runs:
+  using: 'node12'
+  main: 'dist/save/index.js'
