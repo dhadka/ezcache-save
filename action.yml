@@ -27,4 +27,4 @@ outputs:
     description: 'Indicates the restore type, either "miss", "partial", or "full"'
 runs:
   using: 'node12'
-  main: 'dist/save/index.js'
+  main: 'dist/index.js'
