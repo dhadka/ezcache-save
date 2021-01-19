@@ -1,4 +1,4 @@
-name: 'Easy Cache - Save Step'
+name: 'ezcache-save'
 description: 'Simplifies the creation of GitHub Actions caches and adds support for local and AWS S3 storage.'
 inputs:
   type:
@@ -28,3 +28,6 @@ outputs:
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: 'archive'
+  color: 'blue'
